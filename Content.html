@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technical Skills Learning Hub</title>
+  <link rel="stylesheet" href="styling.css">
+  <script src="content.js"></script>
+</head>
+<body>
+    <header>
+  <h1>🧠 Technical Skills Learning Hub</h1>
+  <p>From Foundational Programming to Advanced AI & GPT Technologies</p>
+  <button onclick="logout()" style="
+    background:#fff;
+    color:#0a74da;
+    border:none;
+    border-radius:5px;
+    padding:8px 15px;
+    cursor:pointer;
+    font-weight:bold;
+    margin-top:10px;">
+    🚪 Logout
+  </button>
+</header>
+
+  </header>
+
+  <nav>
+    <a href="#c">C</a>
+    <a href="#cpp">C++</a>
+    <a href="#java">Java</a>
+    <a href="#python">Python</a>
+    <a href="#webdev">Web Dev</a>
+    <a href="#mern">MERN</a>
+    <a href="#data">Data Analytics</a>
+    <a href="#ml">Machine Learning</a>
+    <a href="#ai">AI & GPT</a>
+    <a href="#cyber">Cybersecurity</a>
+    <a href="#cloud">Cloud</a>
+    <a href="#devops">DevOps</a>
+  </nav>
+
+  <main>
+    <div class="toolbar">
+      <input type="text" id="search" placeholder="🔍 Search any topic..." />
+      <button class="toggle-theme" id="themeToggle">🌙 Dark Mode</button>
+    </div>
+
+    <!-- 1. C -->
+    <section id="c">
+      <h2>💾 C Programming <span>▼</span></h2>
+      <ul>
+        <li>Variables, Data Types & Pointers</li>
+        <li>Functions, Loops & Arrays</li>
+        <li>Memory Management</li>
+        <li>File Handling</li>
+      </ul>
+      <a class="learn-more" href="https://www.programiz.com/c-programming" target="_blank">Learn More About C</a>
+    </section>
+
+    <!-- 2. C++ -->
+    <section id="cpp">
+      <h2>⚙️ C++ Programming <span>▼</span></h2>
+      <ul>
+        <li>OOP Concepts</li>
+        <li>Templates & STL</li>
+        <li>Memory Management</li>
+        <li>Advanced Features (Multithreading, Design Patterns)</li>
+      </ul>
+      <a class="learn-more" href="https://www.geeksforgeeks.org/c-plus-plus/" target="_blank">Learn More About C++</a>
+    </section>
+
+    <!-- 3. Java -->
+    <section id="java">
+      <h2>💻 Java Programming <span>▼</span></h2>
+      <ul>
+        <li>OOP & Exception Handling</li>
+        <li>Collections Framework</li>
+        <li>Streams & Lambda Expressions</li>
+        <li>Spring Boot & REST APIs</li>
+      </ul>
+      <a class="learn-more" href="https://www.w3schools.com/java/" target="_blank">Learn More About Java</a>
+    </section>
+
+    <!-- 4. Python -->
+    <section id="python">
+      <h2>🐍 Python Programming <span>▼</span></h2>
+      <ul>
+        <li>Python Basics</li>
+        <li>Data Structures</li>
+        <li>Object-Oriented Programming</li>
+        <li>Data Science & Automation</li>
+      </ul>
+      <a class="learn-more" href="https://www.learnpython.org/" target="_blank">Learn More About Python</a>
+    </section>
+
+    <!-- 5. Web Development -->
+    <section id="webdev">
+      <h2>🌐 Web Development <span>▼</span></h2>
+      <ul>
+        <li>HTML5, CSS3 & JavaScript</li>
+        <li>Responsive Design (Bootstrap, Tailwind)</li>
+        <li>Frontend Frameworks (React, Vue)</li>
+        <li>Backend (Node.js, Django)</li>
+      </ul>
+      <a class="learn-more" href="https://www.freecodecamp.org/learn" target="_blank">Learn More About Web Development</a>
+    </section>
+
+    <!-- 6. MERN Stack -->
+    <section id="mern">
+      <h2>🧩 MERN Stack <span>▼</span></h2>
+      <ul>
+        <li>MongoDB (Database)</li>
+        <li>Express.js (Backend)</li>
+        <li>React.js (Frontend)</li>
+        <li>Node.js (Server)</li>
+      </ul>
+      <a class="learn-more" href="https://www.mongodb.com/mern-stack" target="_blank">Learn More About MERN Stack</a>
+    </section>
+
+    <!-- 7. Data Analytics -->
+    <section id="data">
+      <h2>📊 Data Analytics <span>▼</span></h2>
+      <ul>
+        <li>Data Cleaning & Visualization</li>
+        <li>SQL, Power BI, Tableau</li>
+        <li>Statistical Analysis</li>
+        <li>Data-Driven Decision Making</li>
+      </ul>
+      <a class="learn-more" href="https://www.datacamp.com/" target="_blank">Learn More About Data Analytics</a>
+    </section>
+
+    <!-- 8. Machine Learning -->
+    <section id="ml">
+      <h2>🤖 Machine Learning <span>▼</span></h2>
+      <ul>
+        <li>Supervised & Unsupervised Learning</li>
+        <li>Regression, Classification & Clustering</li>
+        <li>TensorFlow, PyTorch, Scikit-Learn</li>
+        <li>Model Evaluation & Optimization</li>
+      </ul>
+      <a class="learn-more" href="https://www.coursera.org/learn/machine-learning" target="_blank">Learn More About Machine Learning</a>
+    </section>
+
+    <!-- 9. Artificial Intelligence & GPT -->
+    <section id="ai">
+      <h2>🧠 Artificial Intelligence & GPT <span>▼</span></h2>
+      <ul>
+        <li>Neural Networks & Deep Learning</li>
+        <li>Natural Language Processing (NLP)</li>
+        <li>Computer Vision & Reinforcement Learning</li>
+        <li>Generative AI (GPT, DALL·E, LLaMA, Gemini)</li>
+        <li>AI Ethics & Responsible Development</li>
+      </ul>
+      <a class="learn-more" href="https://openai.com/research" target="_blank">Learn More About AI & GPT</a>
+    </section>
+
+    <!-- 10. Cybersecurity -->
+    <section id="cyber">
+      <h2>🛡️ Cybersecurity <span>▼</span></h2>
+      <ul>
+        <li>Network Security & Firewalls</li>
+        <li>Ethical Hacking & Penetration Testing</li>
+        <li>Encryption & Secure Communication</li>
+        <li>Incident Response & Risk Management</li>
+      </ul>
+      <a class="learn-more" href="https://www.cybrary.it/" target="_blank">Learn More About Cybersecurity</a>
+    </section>
+
+    <!-- 11. Cloud Computing -->
+    <section id="cloud">
+      <h2>☁️ Cloud Computing <span>▼</span></h2>
+      <ul>
+        <li>AWS, Azure & Google Cloud</li>
+        <li>Serverless Architecture</li>
+        <li>Cloud Storage & Databases</li>
+        <li>Infrastructure as Code (Terraform)</li>
+      </ul>
+      <a class="learn-more" href="https://aws.amazon.com/what-is-cloud-computing/" target="_blank">Learn More About Cloud Computing</a>
+    </section>
+
+    <!-- 12. DevOps -->
+    <section id="devops">
+      <h2>⚙️ DevOps <span>▼</span></h2>
+      <ul>
+        <li>CI/CD Pipelines</li>
+        <li>Docker, Kubernetes & Jenkins</li>
+        <li>Monitoring & Logging</li>
+        <li>Automation & Collaboration</li>
+      </ul>
+      <a class="learn-more" href="https://www.atlassian.com/devops" target="_blank">Learn More About DevOps</a>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Technical Skills Learning Hub | Designed by Anjali 🌟</p>
+  </footer>
+</body>
+</html>

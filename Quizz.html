@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technical Skills Quiz</title>
+<script src="Quizz.js"></script>
+<style>
+body { font-family: "Segoe UI", sans-serif; background:#f4f4f4; padding:20px; }
+h1 { color:#007bff; text-align:center; }
+.topics { display:flex; flex-wrap:wrap; justify-content:center; margin-bottom:30px; }
+.topic { background:#fff; padding:20px; margin:10px; border-radius:10px; width:180px; text-align:center; cursor:pointer; box-shadow:0 0 10px rgba(0,0,0,0.1); }
+.topic:hover { background:#e3f2fd; }
+.quiz-container { max-width:800px; margin:0 auto; }
+.question { background:#fff; padding:15px; margin:15px 0; border-radius:10px; box-shadow:0 0 5px rgba(0,0,0,0.1); }
+button { padding:10px 20px; background:#007bff; color:#fff; border:none; border-radius:5px; cursor:pointer; margin-top:10px; }
+button:hover { background:#0056b3; }
+.score { margin-top:20px; font-weight:bold; color:green; text-align:center; }
+</style>
+</head>
+<body>
+
+<h1>🧠 Technical Skills Quiz</h1>
+
+<div class="topics">
+  <div class="topic" onclick="startQuiz('Java')">Java</div>
+  <div class="topic" onclick="startQuiz('Python')">Python</div>
+  <div class="topic" onclick="startQuiz('C++')">C++</div>
+  <div class="topic" onclick="startQuiz('C')">C</div>
+  <div class="topic" onclick="startQuiz('Web')">Web Development</div>
+  <div class="topic" onclick="startQuiz('MERN')">MERN</div>
+  <div class="topic" onclick="startQuiz('AI')">AI</div>
+  <div class="topic" onclick="startQuiz('ML')">Machine Learning</div>
+  <div class="topic" onclick="startQuiz('Cyber')">Cybersecurity</div>
+  <div class="topic" onclick="startQuiz('Data')">Data Analytics</div>
+  <div class="topic" onclick="startQuiz('GPT')">GPT</div>
+</div>
+
+<div class="quiz-container" id="quiz-container"></div>
+<div class="score" id="score"></div>
+</body>
+</html>
