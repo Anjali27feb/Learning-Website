@@ -1,0 +1,164 @@
+const quizzes = {
+  "Java": [
+    {q:"Which keyword is used to inherit a class in Java?", a:"extends", options:["extends","implements","inherits"]},
+    {q:"Java is:", a:"both", options:["compiled","interpreted","both"]},
+    {q:"Entry point of Java program?", a:"main", options:["start","main","init"]},
+    {q:"Which is not a Java data type?", a:"real", options:["int","boolean","real"]},
+    {q:"Keyword to prevent inheritance?", a:"final", options:["final","static","private"]},
+    {q:"Java collection?", a:"ArrayList", options:["ArrayList","LinkedListNode","ListNode"]},
+    {q:"Keyword for constant?", a:"final", options:["const","final","static"]},
+    {q:"Operator for comparison?", a:"==", options:["=","==","==="]},
+    {q:"Package imported by default?", a:"java.lang", options:["java.util","java.io","java.lang"]},
+    {q:"Size of int in Java?", a:"4 bytes", options:["2 bytes","4 bytes","8 bytes"]}
+  ],
+  "Python":[
+    {q:"Define a function in Python?", a:"def", options:["func","def","function"]},
+    {q:"Python is:", a:"interpreted", options:["interpreted","compiled","both"]},
+    {q:"Python lists are:", a:"mutable", options:["mutable","immutable","fixed"]},
+    {q:"Which symbol starts a comment?", a:"#", options:["#","//","--"]},
+    {q:"Python supports OOP?", a:"yes", options:["yes","no","sometimes"]},
+    {q:"Python tuple is:", a:"immutable", options:["mutable","immutable","changeable"]},
+    {q:"Python indentation is for?", a:"block", options:["loop","block","variable"]},
+    {q:"Python keyword for loop?", a:"for", options:["for","loop","while"]},
+    {q:"Python module import keyword?", a:"import", options:["include","import","require"]},
+    {q:"Python boolean True equals?", a:"1", options:["0","1","2"]}
+  ],
+  "C++":[
+    {q:"C++ developed by?", a:"Bjarne Stroustrup", options:["Dennis Ritchie","Bjarne Stroustrup","James Gosling"]},
+    {q:"Which supports OOP?", a:"C++", options:["C","C++","Python"]},
+    {q:"C++ main function return type?", a:"int", options:["void","int","float"]},
+    {q:"Access specifier for private?", a:"private", options:["public","private","protected"]},
+    {q:"C++ supports?", a:"both", options:["procedural","OOP","both"]},
+    {q:"Which operator is for pointer?", a:"*", options:["&","*","%"]},
+    {q:"C++ default access in class?", a:"private", options:["public","private","protected"]},
+    {q:"Header file for cout?", a:"iostream", options:["stdio.h","iostream","conio.h"]},
+    {q:"Namespace keyword?", a:"namespace", options:["name","namespace","using"]},
+    {q:"C++ comment?", a:"//", options:["//","/* */","#"]}
+  ],
+  "C":[
+    {q:"C developed by?", a:"Dennis Ritchie", options:["Dennis Ritchie","Bjarne Stroustrup","James Gosling"]},
+    {q:"C is:", a:"procedural", options:["OOP","procedural","functional"]},
+    {q:"C main return type?", a:"int", options:["int","void","float"]},
+    {q:"Which header for printf?", a:"stdio.h", options:["stdio.h","iostream","stdlib.h"]},
+    {q:"C comment?", a:"//", options:["//","/* */","#"]},
+    {q:"C array index starts from?", a:"0", options:["0","1","-1"]},
+    {q:"C supports pointer?", a:"yes", options:["yes","no","sometimes"]},
+    {q:"Keyword for constant?", a:"const", options:["constant","const","final"]},
+    {q:"C supports recursion?", a:"yes", options:["yes","no","maybe"]},
+    {q:"C preprocessor uses?", a:"#", options:["#","$","@" ]}
+  ],
+  "Web":[
+    {q:"HTML stands for?", a:"HyperText Markup Language", options:["HyperText Markup Language","HyperText Markdown Language","Hyper Transfer Markup Language"]},
+    {q:"CSS is for?", a:"Styling", options:["Content","Styling","Structure"]},
+    {q:"JS stands for?", a:"JavaScript", options:["JavaScript","JavaSource","JScript"]},
+    {q:"HTML tag for link?", a:"a", options:["link","a","href"]},
+    {q:"CSS color property?", a:"color", options:["bgcolor","color","textcolor"]},
+    {q:"JS function keyword?", a:"function", options:["func","function","def"]},
+    {q:"HTML table tag?", a:"table", options:["table","tr","td"]},
+    {q:"CSS selector for id?", a:"#", options:[".","#","$"]},
+    {q:"JS alert box?", a:"alert()", options:["alert()","msg()","popup()"]},
+    {q:"HTML for image?", a:"img", options:["image","img","picture"]}
+  ],
+  "MERN":[
+    {q:"M in MERN?", a:"MongoDB", options:["MySQL","MongoDB","MariaDB"]},
+    {q:"E in MERN?", a:"Express", options:["Express","Entity","Elastic"]},
+    {q:"R in MERN?", a:"React", options:["React","Redux","Router"]},
+    {q:"N in MERN?", a:"Node.js", options:["Node.js","Next.js","Nest"]},
+    {q:"Full-stack JS?", a:"MERN", options:["LAMP","MEAN","MERN"]},
+    {q:"React library for UI?", a:"React", options:["React","Vue","Angular"]},
+    {q:"Node.js is for?", a:"Backend", options:["Frontend","Backend","Database"]},
+    {q:"Express is?", a:"Framework", options:["Library","Framework","Language"]},
+    {q:"MongoDB is?", a:"NoSQL DB", options:["SQL DB","NoSQL DB","File DB"]},
+    {q:"JS runtime?", a:"Node.js", options:["React","Node.js","Angular"]}
+  ],
+  "AI":[
+    {q:"AI stands for?", a:"Artificial Intelligence", options:["Artificial Intelligence","Automated Input","Automatic Interface"]},
+    {q:"AI mimics?", a:"Human Intelligence", options:["Animal Behavior","Human Intelligence","Machine Hardware"]},
+    {q:"AI type: narrow?", a:"Specific Task", options:["All tasks","Specific Task","Random Task"]},
+    {q:"AI can learn?", a:"Yes", options:["Yes","No","Maybe"]},
+    {q:"AI in daily life?", a:"Virtual Assistant", options:["Car Engine","Virtual Assistant","Book"]},
+    {q:"AI language?", a:"Python", options:["Python","C++","Java"]},
+    {q:"AI uses data?", a:"Yes", options:["Yes","No","Sometimes"]},
+    {q:"AI can predict?", a:"Yes", options:["Yes","No","Never"]},
+    {q:"AI fields?", a:"ML & NLP", options:["Web Dev","ML & NLP","Networking"]},
+    {q:"AI vs ML?", a:"ML subset of AI", options:["AI subset of ML","ML subset of AI","No relation"]}
+  ],
+  "ML":[
+    {q:"ML stands for?", a:"Machine Learning", options:["Machine Learning","Main Logic","Model Language"]},
+    {q:"ML is subset of?", a:"AI", options:["AI","Data Science","Python"]},
+    {q:"ML uses data?", a:"Yes", options:["Yes","No","Maybe"]},
+    {q:"Supervised learning?", a:"Labeled Data", options:["Unlabeled Data","Labeled Data","Both"]},
+    {q:"Unsupervised learning?", a:"No Labels", options:["No Labels","Labeled Data","Partial Labels"]},
+    {q:"ML task: Regression?", a:"Predict Value", options:["Predict Value","Classify","Cluster"]},
+    {q:"ML task: Classification?", a:"Category", options:["Category","Value","Sequence"]},
+    {q:"ML library in Python?", a:"scikit-learn", options:["numpy","scikit-learn","pandas"]},
+    {q:"Overfitting?", a:"Model too fit", options:["Model too fit","Model not fit","Perfect"]},
+    {q:"ML evaluation metric?", a:"Accuracy", options:["Accuracy","Length","Width"]}
+  ],
+  "Cyber":[
+    {q:"Cybersecurity protects?", a:"Data & Systems", options:["Data & Systems","Hardware","Websites"]},
+    {q:"Malware type?", a:"Virus", options:["Virus","Browser","OS"]},
+    {q:"Phishing?", a:"Fake Emails", options:["Fake Emails","Virus","Firewall"]},
+    {q:"Firewall purpose?", a:"Block threats", options:["Block threats","Store data","Run apps"]},
+    {q:"Encryption is?", a:"Data Security", options:["Data Security","Data Loss","Data Entry"]},
+    {q:"Strong password?", a:"Yes", options:["Yes","No","Optional"]},
+    {q:"2FA means?", a:"Two-Factor Authentication", options:["Two-Factor Authentication","Two Forms Access","Two File Access"]},
+    {q:"VPN use?", a:"Secure connection", options:["Secure connection","Faster internet","Web design"]},
+    {q:"Cyberattack example?", a:"DDoS", options:["DDoS","CSS","HTML"]},
+    {q:"Patch update?", a:"Fix security", options:["Fix security","Add features","Remove apps"]}
+  ],
+  "Data":[
+    {q:"Data Analytics is?", a:"Analyze Data", options:["Analyze Data","Store Data","Delete Data"]},
+    {q:"Tools for analysis?", a:"Excel/SQL", options:["Excel/SQL","C++/Java","Photoshop"]},
+    {q:"Big data platform?", a:"Hadoop", options:["Hadoop","React","Node.js"]},
+    {q:"Data visualization?", a:"Charts/Graphs", options:["Charts/Graphs","Texts","Emails"]},
+    {q:"Data cleaning?", a:"Remove errors", options:["Remove errors","Add data","Store data"]},
+    {q:"Data wrangling?", a:"Format Data", options:["Format Data","Encrypt Data","Delete Data"]},
+    {q:"Python library for data?", a:"pandas", options:["pandas","React","TensorFlow"]},
+    {q:"SQL use?", a:"Query Data", options:["Query Data","Design UI","Compile code"]},
+    {q:"Analytics KPI?", a:"Key Metric", options:["Key Metric","Code Metric","Time Metric"]},
+    {q:"Predictive analytics?", a:"Forecast", options:["Forecast","Store","Delete"]}
+  ],
+  "GPT":[
+    {q:"GPT stands for?", a:"Generative Pre-trained Transformer", options:["Generative Pre-trained Transformer","Graphical Pretrained Tool","General Processing Transformer"]},
+    {q:"GPT developed by?", a:"OpenAI", options:["OpenAI","Google","Microsoft"]},
+    {q:"GPT used for?", a:"Text generation", options:["Text generation","Data storage","Web hosting"]},
+    {q:"GPT model type?", a:"Transformer", options:["RNN","CNN","Transformer"]},
+    {q:"GPT input?", a:"Prompt text", options:["Prompt text","Image","Video"]},
+    {q:"GPT output?", a:"Text", options:["Text","Audio","Video"]},
+    {q:"GPT can code?", a:"Yes", options:["Yes","No","Maybe"]},
+    {q:"GPT learning type?", a:"Unsupervised", options:["Supervised","Unsupervised","Reinforcement"]},
+    {q:"GPT API used?", a:"Yes", options:["Yes","No","Optional"]},
+    {q:"GPT can chat?", a:"Yes", options:["Yes","No","Sometimes"]}
+  ]
+};
+
+function startQuiz(topic) {
+  const container = document.getElementById('quiz-container');
+  const scoreDiv = document.getElementById('score');
+  scoreDiv.innerText = '';
+  container.innerHTML = `<h2>${topic} Quiz (10 Questions)</h2>`;
+  const quiz = quizzes[topic];
+  if(!quiz) {
+    container.innerHTML += "<p>No quiz available for this topic yet.</p>";
+    return;
+  }
+  quiz.forEach((item,index)=>{
+    const div = document.createElement('div');
+    div.classList.add('question');
+    div.innerHTML = `<p>${index+1}. ${item.q}</p>` + 
+      item.options.map(opt => `<label><input type="radio" name="q${index}" value="${opt}"> ${opt}</label><br>`).join('');
+    container.appendChild(div);
+  });
+  const btn = document.createElement('button');
+  btn.innerText = "Submit Quiz";
+  btn.onclick = function(){
+    let score=0;
+    quiz.forEach((item,index)=>{
+      const ans = document.querySelector(`input[name="q${index}"]:checked`)?.value;
+      if(ans===item.a) score++;
+    });
+    scoreDiv.innerText = `Your Score: ${score}/${quiz.length}`;
+  };
+  container.appendChild(btn);
+}
