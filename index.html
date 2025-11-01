@@ -3,76 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href='sucess_logo.png' type="image/png">
-    <title>Home page</title>
+    <link rel="icon" href="sucess_logo.png" type="image/png">
+    <title>Learning Page</title>
     <style>
-        *{
+        * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
-        body{
-             margin:0px;
-             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
         }
-        h1{
-            text-align: center;
-            font-size: 50px;
-            color:black;
+
+        header {
             background-color: antiquewhite;
+            padding: 20px 10px;
         }
-        nav{
-            background-color: #333;
-            overflow: hidden;
+
+        .header-container {
+            display: flex;
+            align-items: center;   /* vertically center logo and heading */
+            justify-content: center; /* center horizontally */
+            gap: 15px;  /* space between logo and heading */
+            flex-wrap: wrap;  /* allows wrapping on small screens */
         }
-        nav a{
-              text-decoration: none;
-              padding :25px;
-              text-align: center;
-              float: left;
-              color: white;
+
+        header h1 {
+            font-size: clamp(24px, 5vw, 50px); /* auto-scaling text */
+            margin: 0;
+            text-align: left;
         }
-        nav a:hover{
-            background-color: lightgrey;
-        }
-        h2{
-            text-align: center;
-            font-size: 40px;
-        }
-        .center{
+
+        #logo img {
             display: block;
-            margin-left: auto;
-            margin-right: auto;
+            width: 80px;
+            height: 60px;
         }
-        #logo{
-            margin-right: 10px;
-            position: absolute;
-            margin-bottom: 10px;
-            margin-left: 20px;
-            margin-top: 3px;
-            
+
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 0;
         }
-        
+
+        nav .nav-links {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: lightgrey;
+            color: black;
+        }
+
+        nav .menu {
+            display: none;
+            cursor: pointer;
+            color: white;
+            padding: 15px 20px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        section h2 {
+            font-size: clamp(20px, 4vw, 40px);
+            margin-bottom: 20px;
+        }
+
+        section img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        section img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            nav .menu {
+                display: block;
+            }
+        }
+
     </style>
 </head>
 <body>
     <header>
-        <div id="logo"><a href="miniPro1.html"></a>
-            <img src="sucess_logo.png" width="80px" height="60px">
+        <div class="header-container">
+            <div id="logo">
+                <a href="learning.html">
+                    <img src="sucess_logo.png" alt="Logo">
+                </a>
+            </div>
+            <h1>Welcome to "WAY OF SUCCESS"</h1>
         </div>
-        <h1>Welcome to "WAY OF SUCCESS"</h1>
     </header>
-    <nav> 
-        <a href="#">Home</a>
-        <a href="Content.html">Content</a>
-        <a href="Quizz.html">Quizzes</a>
-        <a href="signup.html">Signup</a>
-        <a href="logins.html">Login</a>
-        <a href="#" onclick="logout()">Logout</a>
+
+    <nav>
+        <span class="menu" onclick="toggleMenu()">☰ Menu</span>
+        <div class="nav-links">
+            <a href="learning.html">Home</a>
+            <a href="Content.html">Content</a>
+            <a href="Quizz.html">Quizzes</a>
+            <a href="signup.html">Signup</a>
+            <a href="logins.html">Login</a>
+            <a href="#" onclick="logout()">Logout</a>
+        </div>
     </nav>
+
     <main>
         <section>
             <h2>"I had no idea I could do that."</h2>
-            <img src="success.jpg" class="center">
+            <img src="success.jpg" alt="Success Image" class="center">
         </section>
     </main>
+
+    <script>
+        function toggleMenu() {
+            const links = document.querySelector('.nav-links');
+            if (links.style.display === 'flex') {
+                links.style.display = 'none';
+            } else {
+                links.style.display = 'flex';
+            }
+        }
+
+        function logout() {
+            alert("You have been logged out!");
+            // Add real logout logic here
+        }
+    </script>
 </body>
 </html>
